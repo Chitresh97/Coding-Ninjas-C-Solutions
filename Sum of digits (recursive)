@@ -1,0 +1,20 @@
+/*Write a recursive function that returns the sum of the digits of a given integer.*/
+
+int	sum(int n,int s){
+    if(n==0){
+        return s;
+    }
+
+    else {
+        s=s+(n%10);
+        return sum(n/10,s);
+    }
+   }
+
+int sumOfDigits(int n) {
+    // Write your code here
+  int s=0;
+  return sum(n,s);
+
+}
+
