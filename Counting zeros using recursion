@@ -1,0 +1,19 @@
+int	countz(int n,int count){
+      if(n==0){
+        return count;
+      }
+      else if(n!=0 && n%10!=0){
+          return countz(n/10, count);
+      }
+      else if(n!=0 && n%10==0){
+        count++;
+      	return countz(n/10, count);
+      }
+   }
+   
+int countZeros(int n) {
+    // Write your code here
+   int count=0;
+   int m = countz(n,count);
+  return m;
+}
